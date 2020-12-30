@@ -15,11 +15,22 @@ jobs:
      - stage: jdk8
        name: "test and docs on jdk8"
        script: sbt ++$TRAVIS_SCALA_VERSION test doc
+       arch: amd64
      - stage: jdk11
        name: "test and docs on jdk11"
        script: sbt ++$TRAVIS_SCALA_VERSION test doc
        env: TRAVIS_JDK=11
-       
+       arch: amd64
+     - stage: jdk8
+       name: "test and docs on jdk8"
+       script: sbt ++$TRAVIS_SCALA_VERSION test doc
+       arch: ppc64le
+     - stage: jdk11
+       name: "test and docs on jdk11"
+       script: sbt ++$TRAVIS_SCALA_VERSION test doc
+       env: TRAVIS_JDK=11
+       arch: ppc64le
+
 
 env:
   global:

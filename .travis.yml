@@ -1,3 +1,7 @@
+arch:
+     - amd64
+     - ppc64le
+     
 # use Docker-based container (instead of OpenVZ)
 sudo: false
 
@@ -15,6 +19,7 @@ jobs:
        name: "test and docs on jdk11"
        script: sbt ++$TRAVIS_SCALA_VERSION test doc
        env: TRAVIS_JDK=11
+       
 
 env:
   global:

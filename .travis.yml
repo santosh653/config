@@ -1,7 +1,6 @@
 arch:
      - amd64
      - ppc64le
-     
 # use Docker-based container (instead of OpenVZ)
 sudo: false
 

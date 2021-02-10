@@ -11,20 +11,20 @@ install: jabba install "adopt@~1.$TRAVIS_JDK.0-0" && jabba use "$_" && java -Xmx
 
 jobs:
   include:
-     - stage: jdk8
+     - stage: openjdk8
        name: "test and docs on jdk8"
        script: sbt ++$TRAVIS_SCALA_VERSION test doc
        arch: amd64
-     - stage: jdk11
+     - stage: openjdk11
        name: "test and docs on jdk11"
        script: sbt ++$TRAVIS_SCALA_VERSION test doc
        env: TRAVIS_JDK=11
        arch: amd64
-     - stage: jdk8
+     - stage: openjdk8
        name: "test and docs on jdk8"
        script: sbt ++$TRAVIS_SCALA_VERSION test doc
        arch: ppc64le
-     - stage: jdk11
+     - stage: openjdk11
        name: "test and docs on jdk11"
        script: sbt ++$TRAVIS_SCALA_VERSION test doc
        env: TRAVIS_JDK=11
